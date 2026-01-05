@@ -12,7 +12,7 @@ p1=Person("ZA",23)
 
 p1.age = 56
 print (p1.age)
-"""
+
 
 #delete class properties
 
@@ -29,4 +29,21 @@ del p1.age
 
 print(p1.name)
 print(p1.age)
-        
+  """
+
+#Class properties vs instance proeperties
+
+class Person:
+    species = "Human"
+
+    def __init__(self,name):
+        self.name= name     
+
+p1=Person("ZA")
+p2 = Person ("RA")
+
+print(p1.name)
+print(p2.name)
+
+print(p1.species)
+print(p2.species)
