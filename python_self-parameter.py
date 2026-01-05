@@ -40,7 +40,7 @@ class Car:
 car1= Car ("Toyota","corola","2002")
 car1.display_info()
 
-"""
+
 
 #call one method from another method using self
 
@@ -55,4 +55,19 @@ class Person:
         meseage = self.greet()
         print(meseage + "Welcome to home")
 p1=Person("ZAr")
+p1.welcome()
+"""
+
+class Person:
+    def __int__ (self,name):
+        self.name = name
+
+    def greet(self):
+        return "Hello " + self.name
+    
+    def welcome(self):
+        message = self.greet
+        print(message + "wecome to home")
+
+p1=Person("Rafi")
 p1.welcome()
