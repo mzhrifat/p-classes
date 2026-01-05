@@ -66,8 +66,8 @@ class Person:
         return "Hello " + self.name
     
     def welcome(self):
-        message = self.greet
-        print(message + "wecome to home")
+        meseage = self.greet
+        print(meseage + "wecome to home")
 
-p1=Person("Rafi")
+p1= Person ("Rafi")
 p1.welcome()
