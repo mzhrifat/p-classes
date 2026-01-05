@@ -9,17 +9,33 @@ class Person:
 
 p1 = Person("Emil", 25)
 p1.greet()
-"""
 
+#self change 
 class Person:
     def __init__ (myobject,name,age):
         myobject.name = name
         myobject.age = age
 
     def greet(Wellcome):
-        print("Helo,my name is"+ Wellcome.name)
+        print("Helo,my name is"+ Wellcome.name,age)
 
 p1=Person("Rif")
 p1= Person(32)
 
 p1.greet()
+
+"""
+
+#Access multiple properties using self
+
+class Car:
+    def __init__ (self,brand,model,year):
+        self.brand = brand
+        self.model = model
+        self.year = year
+
+    def display_info(self):
+        print(f"{self.year} {self.brand}  {self.model }")
+
+car1= Car ("Toyota","corola","2002")
+car1.display_info()
