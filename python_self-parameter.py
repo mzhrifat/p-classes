@@ -24,7 +24,7 @@ p1= Person(32)
 
 p1.greet()
 
-"""
+
 
 #Access multiple properties using self
 
@@ -39,3 +39,20 @@ class Car:
 
 car1= Car ("Toyota","corola","2002")
 car1.display_info()
+
+"""
+
+#call one method from another method using self
+
+class Person:
+    def __init__ (self,name):
+        self.name = name
+
+    def greet (self):
+        return "Hello" + self.name
+     
+    def welcome (self):
+        meseage = self.greet()
+        print(meseage + "Welcome to home")
+p1=Person("ZAr")
+p1.welcome()
