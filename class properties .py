@@ -29,7 +29,7 @@ del p1.age
 
 print(p1.name)
 print(p1.age)
-  """
+  
 
 #Class properties vs instance proeperties
 
@@ -47,3 +47,21 @@ print(p2.name)
 
 print(p1.species)
 print(p2.species)
+
+"""
+
+#modifying class properties
+
+class Person:
+    lastname = ""
+
+    def __init__ (self,name):
+        self.name = name
+
+p1= Person ("Mili")
+p2= Person("Lua")
+
+Person.lastname= "Rasel"
+
+print(p1.lastname)
+print(p2.lastname)
