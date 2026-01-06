@@ -62,7 +62,7 @@ class Person:
 
 p1=Person("TO",23)
 print(p1)
-"""
+
 #create a multiple methods in a class
 
 class Playlist:
@@ -74,7 +74,7 @@ class Playlist:
         self.songs.append(song)
         print (f"added : {song}")
 
-    def remove_songs(self,song):
+    def remove_song(self,song):
         if song in self.songs:
             self.songs.remove(song)
             print (f"Removed:{song}")
@@ -88,3 +88,17 @@ my_playlist=Playlist ("Favourite")
 my_playlist.add_song("AAAABC")
 my_playlist.add_song("SCC")
 my_playlist.show_songs()
+"""
+
+
+#Delete Methods
+
+class Person:
+    def __init__(self,name):
+        self.name=name
+
+    def greet(self):
+        print ("Hello !")
+p1=Person("ER")
+del Person.greet
+p1.greet
