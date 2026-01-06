@@ -49,7 +49,7 @@ class Person:
 p1=Person("DF",24)
 p1.celebrate_birthday()
 p1.celebrate_birthday()
-"""
+
 
 #With the __str__() method:
 
@@ -62,3 +62,29 @@ class Person:
 
 p1=Person("TO",23)
 print(p1)
+"""
+#create a multiple methods in a class
+
+class Playlist:
+    def __init__ (self,name):
+        self.name =name
+        self.songs = []
+
+    def add_song(self,song):
+        self.songs.append(song)
+        print (f"added : {song}")
+
+    def remove_songs(self,song):
+        if song in self.songs:
+            self.songs.remove(song)
+            print (f"Removed:{song}")
+
+    def show_songs(self):
+        print (f"playlist '{self.name}' :")
+        for song in self.songs:
+            print (f" -{song}")
+
+my_playlist=Playlist ("Favourite")
+my_playlist.add_song("AAAABC")
+my_playlist.add_song("SCC")
+my_playlist.show_songs()
