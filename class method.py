@@ -34,7 +34,7 @@ class Person:
 
 p1=Person("AS" ,33)
 print(p1.get_info())
-"""
+
 #A method that changes a property value:
 
 class Person:
@@ -49,3 +49,16 @@ class Person:
 p1=Person("DF",24)
 p1.celebrate_birthday()
 p1.celebrate_birthday()
+"""
+
+#With the __str__() method:
+
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def __str__(self):
+        return f"{self.name} ({self.age})"
+
+p1=Person("TO",23)
+print(p1)
