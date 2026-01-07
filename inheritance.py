@@ -60,7 +60,7 @@ class Student(Person):
         super().__init__(fname,lname)
 x=Student("AHJ","affg")
 x.printname()
-"""
+
 #add a properties (graduation year)
 
 class Person:
@@ -78,3 +78,26 @@ class Student(Person):
 
 x=Student("Mike","cOli")
 print(x.graduationyear)
+
+"""
+
+#Add a method called welcome to the Student class:
+
+class Person:
+    def __init__(self,fname,lname):
+        self.firstname=fname
+        self.lastname = lname
+
+    def printname(self):
+        print (self.firstname,self.lastname)
+
+class Student(Person):
+    def __init__(self,fname,lname,year):
+        super().__init__(fname,lname)
+        self.graduationyear = year
+
+    def welcome(self):
+        print("welcome",self.firstname,self.lastname,"to the class of",self.graduationyear)
+
+x=Student("kkk","ddd",2023)
+x.welcome()
