@@ -85,28 +85,27 @@ my_playlist.show_songs()
 """
 #payment method
 
-class Payment:
-    def pay(self, amount):
-        print("Processing payment...")
-
+class Payment():
+    def pay(self,amount):
+        print("Processing Payment")
 
 class CreditCard(Payment):
-    def pay(self, amount):
-        print(f"Paid {amount} Tk using Credit Card")
+    def pay(self,amount):
+        print(f"paid {amount} TK using CreditCard")
 
 class Bkash(Payment):
-    def pay(self, amount):
-        print(f"Paid {amount} Tk using Bkash")
+    def pay(self,amount):
+        print(f"paid {amount} TK using Bkash")
 
-class Nagad(Payment):
-    def pay(self, amount):
-        print(f"Paid {amount} Tk using Nagad")
-payments = [CreditCard(), Bkash(), Nagad()]
+class Nagad():
+    def pay(self,amount):
+        print(f"paid{amount} TK using Nagad")
 
-amount = 1000
+class Rocket(Payment):
+    def pay(self,amount):
+        print(f"paid{amount} Tk usinf Rocket")
 
-for payment in payments:
-    payment.pay(amount)
-
-
-    
+Payments=[CreditCard(),Bkash(),Nagad(),Rocket()]
+amount=100
+for Payment in Payments:
+    Payment.pay(amount)        
