@@ -82,7 +82,7 @@ my_playlist.play_song("Hotel California")
 
 my_playlist.shuffle_playlist()
 my_playlist.show_songs()
-"""
+
 #payment method
 
 class Payment():
@@ -109,3 +109,32 @@ Payments=[CreditCard(),Bkash(),Nagad(),Rocket()]
 amount=100
 for Payment in Payments:
     Payment.pay(amount)        
+"""
+
+class Vecicle:
+    def __init__(self,brand,model):
+        self.brand=brand
+        self.model=model
+    
+    def move(self):
+        print("Move!")
+
+class Car(Vecicle):
+    pass
+
+class Boat(Vecicle):
+    def move (self):
+       print("Sail!")
+
+class Plane(Vecicle):
+    def move(self):
+        print("Fly!")
+
+car1=Car("ca","fa")
+boat1=Boat("daa","da")
+plane1=Plane("ajaj","999")
+
+for x in (car1, boat1, plane1):
+   print(x.brand)
+   print(x.model)
+   x.move()
