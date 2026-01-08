@@ -22,7 +22,7 @@ print(s1.is_pass())
 
 print(s2.get_info())
 print(s2.is_pass())
-"""
+
 
 #2
 
@@ -82,6 +82,31 @@ my_playlist.play_song("Hotel California")
 
 my_playlist.shuffle_playlist()
 my_playlist.show_songs()
+"""
+#payment method
+
+class Payment:
+    def pay(self, amount):
+        print("Processing payment...")
+
+
+class CreditCard(Payment):
+    def pay(self, amount):
+        print(f"Paid {amount} Tk using Credit Card")
+
+class Bkash(Payment):
+    def pay(self, amount):
+        print(f"Paid {amount} Tk using Bkash")
+
+class Nagad(Payment):
+    def pay(self, amount):
+        print(f"Paid {amount} Tk using Nagad")
+payments = [CreditCard(), Bkash(), Nagad()]
+
+amount = 1000
+
+for payment in payments:
+    payment.pay(amount)
 
 
     
