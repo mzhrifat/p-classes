@@ -5,8 +5,8 @@ print(len(x))
 #2
 x= "Hello World"
 print(len(x))
-"""
 
+#3
 class animal:
     def sound(self):
         print("Animal makes Sounds")
@@ -26,3 +26,12 @@ c=cat()
 a.sound()
 d.sound()
 c.sound()
+"""
+thisdict= {
+    "brand": "Toyota",
+    "model":"corola",
+    "year" : 2020
+
+}
+
+print(len(thisdict))
