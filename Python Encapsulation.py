@@ -35,7 +35,7 @@ print(p1.get_age())
 p1.set_age(26)
 print(p1.get_age())
 
-"""
+
 #Use encapsulation to protect and validate data
 
 class Person:
@@ -63,3 +63,15 @@ student.set_grade(85)
 
 print(student.get_grade())
 print(student.get_status())
+
+"""
+
+#Create a protected property:
+class Person:
+    def __init__(self,name,salary):
+        self.name=name
+        self._salary = salary
+        
+p1=Person("DA",45777)
+print(p1.name)
+print(p1._salary)

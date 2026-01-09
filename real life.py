@@ -109,8 +109,8 @@ Payments=[CreditCard(),Bkash(),Nagad(),Rocket()]
 amount=100
 for Payment in Payments:
     Payment.pay(amount)        
-"""
 
+###
 class Vecicle:
     def __init__(self,brand,model):
         self.brand=brand
@@ -138,3 +138,31 @@ for x in (car1, boat1, plane1):
    print(x.brand)
    print(x.model)
    x.move()
+"""
+
+#Use encapsulation to protect and validate data
+class Person:
+    def __init__(self,name):
+        self.name=name
+        self.__grade = 0
+
+    def set_grade(self,grade):
+        if 0<=grade <=100:
+            self.__grade=grade
+        else:
+            print("Grade Must be between 0 and 100")
+
+    def get_grade(self):
+        return self.__grade
+    
+    def get_status(self):
+        if self.__grade>=60:
+            return "Passed"
+        else:
+            return "Failed"
+    
+student = Person("emi")
+student.set_grade(85)
+
+print(student.get_grade())
+print(student.get_status())
