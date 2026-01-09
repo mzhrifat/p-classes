@@ -11,7 +11,7 @@ class Person:
     
 p1=Person("Tobias",25)
 print(p1.get_age())
-"""
+
 
 #Use a setter method to change a private property
 
@@ -35,4 +35,31 @@ print(p1.get_age())
 p1.set_age(26)
 print(p1.get_age())
 
-    
+"""
+#Use encapsulation to protect and validate data
+
+class Person:
+    def __init__(self,name):
+        self.name=name
+        self.__grade=0
+
+    def set_grade(self,grade):
+        if 0<=grade <=100:
+            self.__grade=grade
+        else:
+            print("Grade must be between 0 and 100")
+
+    def get_grade(self):
+            return self.__grade
+
+    def get_status(self):
+            if self.__grade >= 60:
+                return "Paseed"
+            else:
+                return "Failed"
+
+student = Person("Emi")
+student.set_grade(85)
+
+print(student.get_grade())
+print(student.get_status())
