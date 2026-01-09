@@ -64,14 +64,36 @@ student.set_grade(85)
 print(student.get_grade())
 print(student.get_status())
 
-"""
+
 
 #Create a protected property:
 class Person:
     def __init__(self,name,salary):
         self.name=name
         self._salary = salary
-        
+
 p1=Person("DA",45777)
 print(p1.name)
 print(p1._salary)
+"""
+
+#You can also make methods private using the double underscore prefix:
+class Calculator:
+    def __init__(self):
+        self.result = 0
+    
+    def __validate(self,num):
+        if not isinstance(num,(int,float)):
+            return False
+            return True
+    def add (self,num):
+        if self.__validate(num):
+            self.result += num
+        else:
+            print("Invalid number")
+
+calc=Calculator()
+calc.add(10)
+#calc.add(5)
+
+print(calc.result)
