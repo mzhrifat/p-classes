@@ -75,7 +75,7 @@ class Person:
 p1=Person("DA",45777)
 print(p1.name)
 print(p1._salary)
-"""
+
 
 #You can also make methods private using the double underscore prefix:
 class Calculator:
@@ -97,3 +97,15 @@ calc.add(10)
 #calc.add(5)
 
 print(calc.result)
+
+"""
+
+#
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.__age = age
+
+p1=Person("Em",45)
+
+print(p1._Person__age)
