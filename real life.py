@@ -138,7 +138,7 @@ for x in (car1, boat1, plane1):
    print(x.brand)
    print(x.model)
    x.move()
-"""
+
 
 #Use encapsulation to protect and validate data
 class Person:
@@ -166,3 +166,32 @@ student.set_grade(85)
 
 print(student.get_grade())
 print(student.get_status())
+
+"""
+
+
+
+#python Encaplusation
+
+class ATM:
+    def __init__(self):
+        self.__balance = 1000
+
+    def __validate_pin(self, pin):
+        return pin == 1234
+
+    def withdraw(self, pin, amount):
+        if self.__validate_pin(pin):
+            if amount <= self.__balance:
+                self.__balance -= amount
+                print("Withdraw successful")
+            else:
+                print("Insufficient balance")
+        else:
+            print("Wrong PIN")
+
+    def get_balance(self, pin):
+        if self.__validate_pin(pin):
+            return self.__balance
+        else:
+            return "Wrong PIN"
