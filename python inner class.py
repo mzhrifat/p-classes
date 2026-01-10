@@ -31,7 +31,7 @@ class Outer:
 outer = Outer()
 inner = outer.Inner(outer)
 inner.display()
-"""
+
 
 #Use an inner class to represent a car's engine
 class Car:
@@ -63,3 +63,24 @@ car= Car("BMW","Ford")
 car.drive()
 car.engine.start()
 car.drive()
+"""
+
+#A class can have multiple inner classes
+
+class Computer:
+    def __init__(self):
+        self.cpu=self.CPU()
+        self.ram=self.RAM()
+
+    class CPU:
+        def process(self):
+            print("Processing data...")
+
+    class RAM:
+        def store(self):
+            print("Storing data...")
+
+
+computer=Computer()
+computer.cpu.process()
+computer.ram.store()
